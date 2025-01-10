@@ -1,0 +1,205 @@
+* {
+    color: black;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: oswald;
+    cursor: default;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: rgb(218, 0, 0);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgb(218, 0, 0);
+    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    z-index: 3;
+}
+
+.nav-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.nav-left-item h1 {
+    
+    color: white;
+}
+.nav-right-item button {
+    border: none;
+    background: none;
+}
+.links-container {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background: rgb(218, 0, 0);
+    transition: .5s ease-out;
+    overflow: hidden;
+}
+.links-container-content {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.links-container-item {
+    align-items: center;
+    display: inline-flex;
+    gap: 5px;
+    border-bottom: 3px solid rgb(218, 0, 0);
+    transition: .5s ease-out border-color;
+    text-decoration: none;
+}
+.links-container-item h3{
+    color: white;
+}
+.links-container-item:hover {
+    border-bottom: 3px solid white;
+}
+.banner img {
+    filter: grayscale();
+    width: 100%;
+    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+}
+
+.yaps {
+    background-color: rgb(170, 0, 0);
+    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+}
+.right-yap {
+    display: none;
+}
+.yaps-container {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.yaps-container h1 {
+    color: white;
+    font-size: 50px;
+}
+.yaps-container h3 {
+    color: white;
+    margin-top: 20px;
+}
+.jersey {
+    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    background-color: rgb(241, 240, 240);
+}
+.jersey-content {
+    padding: 30px;
+}
+
+.jersey-content h1 {
+    font-size: 50px;
+}
+.jersey-item-wrap {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+.jersey-item {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .25s ease-out;
+    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    background-color: white;
+}
+.jersey-item:hover {
+    transform: scale(1.05);
+}
+.jersey-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.jersey-container-upper {
+    display: flex;
+    justify-content: center;
+}
+.jersey-container-upper img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 330px;
+}
+.jersey-container-lower {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.jersey-container-lower h2 {
+    font-weight: bold;
+}
+.jersey-container-lower h4 {
+    color: rgb(170, 0, 0);
+}
+.jersey-container-lower-content {
+    padding: 10px;
+}
+
+.buy-link {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(170, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    display: inline;
+    border: 3px solid rgb(170, 0, 0);
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: .2s ease-out;
+}
+.buy-link:hover {
+    border: 3px solid rgba(170, 0, 0, 0.726);
+    background: rgba(170, 0, 0, 0.726);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .jersey-item-wrap {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+    .yaps-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+        overflow: hidden;
+        gap: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .left-yap {
+        max-width: 500px;
+    }
+    .right-yap {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
