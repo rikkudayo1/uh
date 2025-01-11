@@ -10,16 +10,13 @@
 }
 
 body {
-    background-color: rgb(218, 0, 0);
+    background-color: rgb(170, 0, 0);
 }
 
 nav {
     position: sticky;
     top: 0;
-    background-color: rgb(218, 0, 0);
-    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    background-color: rgb(170, 0, 0);
     z-index: 3;
 }
 
@@ -30,7 +27,7 @@ nav {
     align-items: center;
 }
 .nav-left-item h1 {
-    
+    font-size: 35px;
     color: white;
 }
 .nav-right-item button {
@@ -41,8 +38,8 @@ nav {
     position: absolute;
     height: 0;
     width: 100%;
-    background: rgb(218, 0, 0);
-    transition: .5s ease-out;
+    background: rgb(170, 0, 0);
+    transition: .25s ease-out;
     overflow: hidden;
 }
 .links-container-content {
@@ -53,10 +50,11 @@ nav {
 }
 
 .links-container-item {
+    font-size: 20px;
     align-items: center;
     display: inline-flex;
     gap: 5px;
-    border-bottom: 3px solid rgb(218, 0, 0);
+    border-bottom: 3px solid rgb(170, 0, 0);
     transition: .5s ease-out border-color;
     text-decoration: none;
 }
@@ -66,39 +64,42 @@ nav {
 .links-container-item:hover {
     border-bottom: 3px solid white;
 }
-.banner img {
-    filter: grayscale();
-    width: 100%;
-    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-}
 
+.banner {
+    display: flex;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+.banner h1 {
+    color: white;
+    position: absolute;
+    font-size: 75px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .yaps {
     background-color: rgb(170, 0, 0);
-    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
+    margin-bottom: 30px;
 }
 .right-yap {
     display: none;
 }
 .yaps-container {
     padding: 30px;
-    margin-bottom: 20px;
 }
 .yaps-container h1 {
     color: white;
-    font-size: 50px;
+    font-size: 70px;
 }
 .yaps-container h3 {
     color: white;
     margin-top: 20px;
 }
 .jersey {
-    box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
     background-color: rgb(241, 240, 240);
 }
 .jersey-content {
@@ -106,24 +107,18 @@ nav {
 }
 
 .jersey-content h1 {
-    font-size: 50px;
+    font-size: 70px;
 }
-.jersey-item-wrap {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
+.jersey-item-wrap2 {
+    display: block;
 }
-.jersey-item {
+.jersey-item2 {
     border-radius: 15px;
     overflow: hidden;
     transition: .25s ease-out;
-    -webkit-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 2px 32px -6px rgba(0,0,0,0.75);
     background-color: white;
 }
-.jersey-item:hover {
+.jersey-item2:hover {
     transform: scale(1.05);
 }
 .jersey-container {
@@ -175,14 +170,23 @@ nav {
     cursor: pointer;
 }
 
+.swiper {
+    margin-top: 50px;
+    background: none;
+    border-radius: 15px;
+}
 @media only screen and (min-width: 768px) {
-    .jersey-item-wrap {
-        margin-top: 25px;
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        align-items: center;
-        justify-content: center;
+    .banner h1 {
+        color: white;
+        position: absolute;
+        font-size: 100px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .jersey-content {
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .yaps-container {
         display: flex;
@@ -195,11 +199,20 @@ nav {
         margin-right: 10%;
     }
     .left-yap {
-        max-width: 500px;
+        max-width: 650px;
     }
     .right-yap {
         display: block;
-        justify-content: center;
-        align-items: center;
+    }
+    .jersey-container-upper img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 275px;
+    }
+    #two {
+        display: block;
+    }
+    #three {
+        display: block;
     }
 }
