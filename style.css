@@ -27,7 +27,7 @@ nav {
     align-items: center;
 }
 .nav-left-item h1 {
-    font-size: 35px;
+    font-size: 26px;
     color: white;
 }
 .nav-right-item button {
@@ -90,10 +90,12 @@ nav {
 }
 .yaps-container {
     padding: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .yaps-container h1 {
     color: white;
-    font-size: 70px;
+    font-size: 60px;
 }
 .yaps-container h3 {
     color: white;
@@ -176,6 +178,14 @@ nav {
     border-radius: 15px;
 }
 @media only screen and (min-width: 768px) {
+    .nav-left-item h1 {
+        font-size: 35px;
+        color: white;
+    }
+    .yaps-container h1 {
+        color: white;
+        font-size: 70px;
+    }
     .banner h1 {
         color: white;
         position: absolute;
