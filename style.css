@@ -80,28 +80,31 @@ nav {
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
+    z-index: 2;
+}
+.banner img {
+    filter: grayscale(.4);
 }
 .yaps {
     background-color: rgb(170, 0, 0);
     margin-bottom: 30px;
 }
-.right-yap {
-    display: none;
-}
-.yaps-container {
+.yaps-container, .yaps-container2 {
     padding: 30px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.yaps-container h1 {
+.yaps-container h1, .yaps-container2 h1 {
     color: white;
     font-size: 60px;
 }
-.yaps-container h3 {
+.yaps-container h3, .yaps-container2 h3 {
     color: white;
     margin-top: 20px;
 }
 .jersey {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     background-color: rgb(241, 240, 240);
 }
 .jersey-content {
@@ -182,7 +185,7 @@ nav {
         font-size: 35px;
         color: white;
     }
-    .yaps-container h1 {
+    .yaps-container h1, .yaps-container2 h1 {
         color: white;
         font-size: 70px;
     }
@@ -198,6 +201,11 @@ nav {
         margin-left: 10%;
         margin-right: 10%;
     }
+    .jersey {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background-color: rgb(241, 240, 240);
+    }
     .yaps-container {
         display: flex;
         flex-direction: row;
@@ -208,10 +216,21 @@ nav {
         margin-left: 10%;
         margin-right: 10%;
     }
-    .left-yap {
+    .yaps-container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        padding: 30px;
+        overflow: hidden;
+        gap: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .left-yap, .right-yap {
         max-width: 650px;
     }
     .right-yap {
+        text-align: left;
         display: block;
     }
     .jersey-container-upper img {
